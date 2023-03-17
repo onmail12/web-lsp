@@ -62,3 +62,8 @@ Route::post('/input_spp', [SppController::class, 'input_spp']);
 Route::get('/edit_spp/{id_spp}', [SppController::class, 'edit_spp']);
 Route::post('/edit_spp', [SppController::class, 'edit_spp_simpan']);
 Route::get('/hapus_spp/{id_spp}', [SppController::class, 'hapus_spp']);
+
+Route::get('/tes', function(){
+    return view('tes');
+});
+Route::post('/laporan', [TransaksiController::class, 'generate_laporan']);
